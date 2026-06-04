@@ -13,13 +13,13 @@ function ItemDetail() {
       .catch(() => navigate('/'));
   }, [id, navigate]);
 
-  if (!item) return <p>Loading...</p>;
+  if (!item) return <p style={{ maxWidth: 600, margin: '24px auto', fontFamily: 'sans-serif' }}>Loading...</p>;
 
   return (
-    <div style={{padding: 16}}>
-      <h2>{item.name}</h2>
-      <p><strong>Category:</strong> {item.category}</p>
-      <p><strong>Price:</strong> ${item.price}</p>
+    <div style={{ maxWidth: 600, margin: '24px auto', fontFamily: 'sans-serif' }}>
+      <h2 style={{ color: "#17477a", textDecoration: "none", fontWeight: 500, fontSize: 18 }}>{item.name}</h2>
+      <p><strong style={{ color: "#17477a", textDecoration: "none", fontWeight: 500, fontSize: 18 }}>Category:</strong> {item.category}</p>
+      <p><strong style={{ color: "#17477a", textDecoration: "none", fontWeight: 500, fontSize: 18 }}>Price:</strong> ${item.price}</p>
     </div>
   );
 }
